@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sky"></div>
+    <main class="app-shell">
+        <section class="hero-card">
+            <div class="hero-copy">
+                <p class="eyebrow">Weather App</p>
+                <h1>Check the sky before you step outside.</h1>
+                <p class="intro">
+                    A simple weather dashboard layout with today's forecast,
+                    hourly conditions, and a 5-day outlook.
+                </p>
+
+                <form class="search-bar" id="weather-form">
+                    <input id="city-input" type="text" placeholder="Search city" autocomplete="off">
+                    <button type="submit">Search</button>
+                </form>
+                <p class="search-note">
+                    Try: Hyderabad, Mumbai, Delhi, Bengaluru, Chennai
+                </p>
+                <p class="status-message" id="status-message" aria-live="polite"></p>
+            </div>
+
+            <div class="temp-panel">
+                <p class="location" id="location">Hyderabad, India</p>
+                <div class="temp-row">
+                    <span class="weather-icon" id="weather-icon">&#9728;</span>
+                    <div>
+                        <h2 id="temperature">29&deg;C</h2>
+                        <p id="condition">Sunny with light breeze</p>
+                    </div>
+                </div>
+                <div class="mini-stats">
+                    <div>
+                        <span>Humidity</span>
+                        <strong id="humidity">54%</strong>
+                    </div>
+                    <div>
+                        <span>Wind</span>
+                        <strong id="wind">12 km/h</strong>
+                    </div>
+                    <div>
+                        <span>Feels like</span>
+                        <strong id="feels-like">31&deg;C</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <article class="panel">
+                <div class="panel-head">
+                    <h3>Today Highlights</h3>
+                    <span id="updated-time">Updated 3:00 PM</span>
+                </div>
+                <div class="highlight-grid">
+                    <div class="highlight-card warm">
+                        <span>UV Index</span>
+                        <strong id="uv-index">7.4</strong>
+                        <p id="uv-text">High protection needed</p>
+                    </div>
+                    <div class="highlight-card cool">
+                        <span>Rain Chance</span>
+                        <strong id="rain-chance">12%</strong>
+                        <p id="rain-text">Dry conditions expected</p>
+                    </div>
+                    <div class="highlight-card dusk">
+                        <span>Sunset</span>
+                        <strong id="sunset">6:34 PM</strong>
+                        <p id="sunset-text">Golden hour starts soon</p>
+                    </div>
+                    <div class="highlight-card air">
+                        <span>Air Quality</span>
+                        <strong id="air-quality">42 AQI</strong>
+                        <p id="air-text">Fresh and comfortable</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <h3>Hourly Forecast</h3>
+                    <span>Next 6 hours</span>
+                </div>
+                <div class="hourly-strip" id="hourly-forecast"></div>
+            </article>
+        </section>
+
+        <section class="panel forecast-panel">
+            <div class="panel-head">
+                <h3>5-Day Forecast</h3>
+                <span>Weekly trend</span>
+            </div>
+            <div class="forecast-grid" id="daily-forecast"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
